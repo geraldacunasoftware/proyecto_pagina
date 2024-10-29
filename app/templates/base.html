@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
+    {% load i18n %}
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a href="#" class="navbar-brand">Navbar</a>
@@ -18,16 +19,16 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="#" class="nav-link" aria-current="page">Home</a>
+                        <a href="#" class="nav-link" aria-current="page">{% trans "Home" %}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" aria-current="page">Quienes somos</a>
+                        <a href="#" class="nav-link" aria-current="page">{% trans "About Us" %}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" aria-current="page">Servicios</a>
+                        <a href="#" class="nav-link" aria-current="page">{% trans "Things to do" %}</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link" aria-current="page">Contactenos</a>
+                        <a href="#" class="nav-link" aria-current="page">{% trans "Contact Us" %}</a>
                     </li>
                 </ul>
             </div>
@@ -39,9 +40,23 @@
                 {% block contenido %}
                 {% endblock contenido %} 
             </div>
-            <div class="my-3 d-flex justify-content-center align-items-center w-100">
-                <p>Otros contenidos</p>
-            </div>   
+            {% blocktrans %}
+            <div class="text-center my-3">
+                    <h1>Welcome to Your Aquatic Adventure!</h1>
+                <p>
+                    Discover the thrill of open waters with our expertly guided boat tours and sport fishing experiences. Whether you're a seasoned angler or a first-time explorer, we offer unforgettable moments on pristine waters, surrounded by breathtaking views and abundant marine life. Let us show you the hidden gems and best fishing spots along our coastline.
+                </p>
+            </div>
+            <div class="text-center my-3">
+                <h1>Explore Boat Tours and Scenic Rides</h1>
+                <p>
+                    Our boat tours are designed for everyone, from those looking to relax and soak up the sun to adventure-seekers eager to explore coastal landscapes. Experience the ocean’s beauty as you cruise past stunning views, spot playful dolphins, and feel the refreshing sea breeze. Sit back, relax, and let us take you on a scenic journey you won’t forget.</p>
+            </div>
+                
+
+                
+
+            {% endblocktrans %}   
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
