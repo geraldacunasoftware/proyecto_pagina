@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block titulo %}
+  Costa Rica Tours | Contact Us
+{% endblock titulo %}
+{% load i18n %}
+
+{% block contact %}
+<div>
+    <form action="{% url 'enviar_correo' %}" method="post">
+    {% csrf_token %}
+        <div class="mb-3">
+            <label for="txt-name">Name</label>
+            <input type="text" name="txt-name" id="txt-name" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="txt-email">Email address</label>
+            <input type="email" name="txt-email" id="txt-email" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="txt-subject">Email subject</label>
+            <input type="text" name="txt-subject" id="txt-subject" class="form-control">
+        </div>
+        <div class="form-floating">
+        <textarea class="" placeholder="Leave a message here" name="txt-message" id="txt-message"></textarea>
+        <label for="txt-message"></label>
+        </div>
+        <div>
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
+{% endblock contact %}
+
+
