@@ -11,3 +11,22 @@
     object-fit: cover; /* Hace que la imagen cubra el contenedor manteniendo la proporción */
     object-position: center; /* Centra la imagen dentro del contenedor */
 }
+.fade-in-image {
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1s ease-out; /* Transición suave */
+}
+
+.fade-in-image.visible {
+    opacity: 1; /* Visible */
+}
+
+.fade-in-section {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Desplazado ligeramente hacia abajo */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transición suave */
+}
+
+.fade-in-section.visible {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Regresa a su posición original */
+}
