@@ -1,3 +1,13 @@
-.main-base{
-    background-color: rgb(23, 182, 182);
+.img-container {
+    width: 100%;
+    height: 70vh; /* Altura deseada para el contenedor */
+    overflow: hidden; /* Oculta el desbordamiento de la imagen si es necesario */
+    position: relative;
+}
+
+.img-responsive {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen cubra el contenedor manteniendo la proporción */
+    object-position: center; /* Centra la imagen dentro del contenedor */
 }
