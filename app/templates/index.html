@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block titulo %}
   Costa Rica Tours
 {% endblock titulo %}
@@ -6,8 +7,10 @@
 {% load i18n %}
 
   <main class="d-flex row">
-    {% blocktrans %}
     <h1 class="text-center">Welcome to Costa Rica Tours</h1>
+    <div class="img-container">
+      <img src="{% static 'imgs/fondoPrincipal.jpg' %}" alt="" class="img-responsive" srcset="">
+    </div>
     <div class="text-center my-3">
       <h1>Welcome to Your Aquatic Adventure!</h1>
     <p>
@@ -20,6 +23,5 @@
         Our boat tours are designed for everyone, from those looking to relax and soak up the sun to adventure-seekers eager to explore coastal landscapes. Experience the ocean’s beauty as you cruise past stunning views, spot playful dolphins, and feel the refreshing sea breeze. Sit back, relax, and let us take you on a scenic journey you won’t forget.
         </p>
     </div>
-    {% endblocktrans %} 
 </main>
 {% endblock contenido %}
